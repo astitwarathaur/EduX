@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Nav from "../components/Nav";
 import ai from "../assets/SearchAi.png";
 import { useSelector } from "react-redux";
+
+
 function AllCourses() {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const navigate = useNavigate();
@@ -69,13 +71,18 @@ function AllCourses() {
           className="space-y-4 text-sm  bg-gray-600 border-white text-[white] border  p-[20px] rounded-2xl"
           onSubmit={(e) => e.preventDefault()}
         >
-          {/* <button
+
+          {/* for ai  */}
+          <button
             className="px-[10px] py-[10px]  bg-black text-white  rounded-[10px] text-[15px] font-light flex items-center justify-center gap-2 cursor-pointer"
             onClick={() => navigate("/searchwithai")}
           >
             Search with AI{" "}
             <img src={ai} className="w-[30px] h-[30px] rounded-full" alt="" />
-          </button> */}
+          </button>
+
+
+
           <label className="flex items-center gap-3 cursor-pointer hover:text-gray-200 transition">
             <input
               type="checkbox"

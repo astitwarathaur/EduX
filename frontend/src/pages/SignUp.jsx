@@ -23,7 +23,7 @@ function SignUp() {
   const navigate = useNavigate();
   let [show, setShow] = useState(false);
   const [loading, setLoading] = useState(false);
-  let dispatch = useDispatch();
+  let dispatch = useDispatch(); // dispatch for state mangemnet in redux
 
   // function to handle signup
   const handleSignUp = async () => {
@@ -32,10 +32,9 @@ function SignUp() {
       const result = await axios.post(
         serverUrl + "/api/auth/signup",
         { name, email, password, role },
-        { withCredentials: true },
+        { withCredentials: true }, // token stored by this
       );
-      dispatch(setUserData(result.data));
-
+      dispatch(setUserData(result.data)); // set data to redux for state managment
       navigate("/");
       toast.success("SignUp Successfully");
       setLoading(false);
@@ -107,6 +106,7 @@ function SignUp() {
               value={email}
             />
           </div>
+          {/* For password */}
           <div className="flex flex-col gap-1 w-[80%] items-start justify-center px-3 relative">
             <label htmlFor="password" className="font-semibold">
               Password
@@ -119,6 +119,7 @@ function SignUp() {
               onChange={(e) => setPassword(e.target.value)}
               value={password}
             />
+            {/* Condition for Eye open or close for password */}
             {!show && (
               <MdOutlineRemoveRedEye
                 className="absolute w-[20px] h-[20px] cursor-pointer right-[5%] bottom-[10%]"
@@ -146,6 +147,7 @@ function SignUp() {
               Educator
             </span>
           </div>
+          {/* Signup button  */}
           <button
             className="w-[80%] h-[40px] bg-black text-white cursor-pointer flex items-center justify-center rounded-[5px]"
             disabled={loading}

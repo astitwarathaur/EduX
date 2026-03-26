@@ -5,7 +5,9 @@ const userSlice = createSlice({
   initialState: {
     userData: null,
   },
-   //setUserData("ankush")<={payload}
+  //setUserData("ankush")<={payload}
+  // set new data into reducers 
+  // useDispatch to use & useSelector for access data
   reducers: {
     setUserData: (state, action) => {
       state.userData = action.payload;

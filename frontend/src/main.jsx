@@ -9,6 +9,7 @@ import { store } from "./redux/store.js";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Provider store={store}>
+      {/*Store for state management redux */}
       <App />
     </Provider>
   </BrowserRouter>,

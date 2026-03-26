@@ -134,7 +134,7 @@ export const sendOtp = async (req, res) => {
 
     await user.save();
     await sendMail(email, otp);
-    return res.status(200).json({ message: "Email Successfully send" });
+    return res.status(200).json({ message: "Email sent Successfully " });
   } catch (error) {
     return res.status(500).json({ message: `send otp error ${error}` });
   }
@@ -151,9 +151,9 @@ export const verifyOtp = async (req, res) => {
     user.resetOtp = undefined;
     user.otpExpires = undefined;
     await user.save();
-    return res.status(200).json({ message: "OTP varified " });
+    return res.status(200).json({ message: "OTP verified " });
   } catch (error) {
-    return res.status(500).json({ message: `Varify otp error ${error}` });
+    return res.status(500).json({ message: `Verify otp error ${error}` });
   }
 };
 

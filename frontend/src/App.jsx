@@ -26,12 +26,12 @@ import ViewLecture from "./pages/ViewLecture";
 import SearchWithAi from "./pages/SearchWithAi";
 import getAllReviews from "./customHooks/getAllReviews";
 
-export const serverUrl = "http://localhost:8000";
+export const serverUrl = "http://localhost:8000"; // backend server URL
 
 function App() {
   let { userData } = useSelector((state) => state.user);
 
-  getCurrentUser();
+  getCurrentUser(); // Custom hook to get current user
   getCouseData();
   getCreatorCourseData();
   getAllReviews();

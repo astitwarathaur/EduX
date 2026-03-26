@@ -5,7 +5,7 @@ export const genToken = async (userId) => {
     let token = jwt.sign({ userId }, process.env.JWT_SECRET, {
       expiresIn: "7d",
     });
-    return token;
+    return token; // must return token
   } catch (error) {
     console.log("token error");
   }

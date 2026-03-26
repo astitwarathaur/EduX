@@ -2,11 +2,11 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_APIKEY,
-  authDomain: "edux-f81ce.firebaseapp.com",
-  projectId: "edux-f81ce",
-  storageBucket: "edux-f81ce.firebasestorage.app",
-  messagingSenderId: "214046911411",
-  appId: "1:214046911411:web:863c813242fff6971b39c6",
+  authDomain: "loginedux-46504.firebaseapp.com",
+  projectId: "loginedux-46504",
+  storageBucket: "loginedux-46504.firebasestorage.app",
+  messagingSenderId: "791964317670",
+  appId: "1:791964317670:web:d138ba6dbfefccf34f0827"
 };
 
 // Initialize Firebase

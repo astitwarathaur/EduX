@@ -16,6 +16,7 @@ let app = express();
 
 app.use(express.json());
 app.use(cookieParser());
+// corse to connect frontend with backend
 app.use(
   cors({
     origin: "http://localhost:5173",
@@ -23,10 +24,10 @@ app.use(
   }),
 );
 // routes path
-app.use("/api/auth", authRouter); // route form Auth 
-app.use("/api/user", userRouter);
+app.use("/api/auth", authRouter); // route for Auth
+app.use("/api/user", userRouter); // route for user
 app.use("/api/course", courseRouter);
-app.use("/api/payment", paymentRouter);
+app.use("/api/payment", paymentRouter);  
 app.use("/api/ai", aiRouter);
 app.use("/api/review", reviewRouter);
 // main route

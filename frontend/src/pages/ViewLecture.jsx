@@ -89,14 +89,14 @@ function ViewLecture() {
     <h3 className="text-md font-semibold text-gray-700 mb-3">Instructor</h3>
     <div className="flex items-center gap-4">
       <img
-        src={courseCreator.photoUrl || '/default-avatar.png'}
+        src={courseCreator?.photoUrl || '/default-avatar.png'}
         alt="Instructor"
         className="w-14 h-14 rounded-full object-cover border"
       />
       <div>
-        <h4 className="text-base font-medium text-gray-800">{courseCreator.name}</h4>
+        <h4 className="text-base font-medium text-gray-800">{courseCreator?.name}</h4>
         <p className="text-sm text-gray-600">
-          {courseCreator.description || 'No bio available.'}
+          {courseCreator?.description || 'No bio available.'}
         </p>
       </div>
     </div>

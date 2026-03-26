@@ -26,7 +26,7 @@ import ViewLecture from "./pages/ViewLecture";
 import SearchWithAi from "./pages/SearchWithAi";
 import getAllReviews from "./customHooks/getAllReviews";
 
-export const serverUrl = "https://edux-vigh.onrender.com"; // backend server URL
+export const serverUrl = "https://edux-heam.onrender.com"; // backend server URL
 
 function App() {
   let { userData } = useSelector((state) => state.user);

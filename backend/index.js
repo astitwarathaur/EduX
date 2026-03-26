@@ -19,7 +19,7 @@ app.use(cookieParser());
 // corse to connect frontend with backend
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://edux-1-dje6.onrender.com",
     credentials: true,
   }),
 );

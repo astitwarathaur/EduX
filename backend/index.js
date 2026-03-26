@@ -19,7 +19,7 @@ app.use(cookieParser());
 // corse to connect frontend with backend
 app.use(
   cors({
-    origin: "https://edux-1-dje6.onrender.com",
+    origin: "https://edux-1-7s4x.onrender.com",
     credentials: true,
   }),
 );
